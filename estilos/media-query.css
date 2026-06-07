@@ -29,6 +29,30 @@ Grandes Telas (Monitores)	Acima de 1200px
         float: right;
         width: 70%;
     }
+
+    html {
+    /* Força o HTML a ter o tamanho real da tela e aceitar o fundo */
+    height: 100%; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    /* Configuração do Gradiente */
+    background-image: linear-gradient(to top, #2D5128, #8DA750);
+    background-repeat: no-repeat;
+    
+    /* A MÁGICA PARA O CELULAR DEITADO: */
+    /* Se o navegador aceitar, ele usa o DVH (que recalcula a altura dinamicamente) */
+    min-height: 100dvh; 
+    /* Se for um navegador mais antigo, ele usa o 100% como plano de fundo (baseado no html) */
+    min-height: 100%;   
+    
+    /* Mantém o fundo esticado e colado na tela */
+    background-size: cover;
+    background-attachment: fixed; 
+}
 }
 
 @media screen and (min-width: 992px) {
