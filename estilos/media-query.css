@@ -1,0 +1,45 @@
+/* Typical Device Breakpoints
+Mobile (Celular)	Até 576px (ou 480px)
+Tablets / Celular Deitado	De 576px até 768px
+Tablets Grandes	De 768px até 992px
+Desktop (Computador)	De 992px até 1200px
+Grandes Telas (Monitores)	Acima de 1200px
+*/
+
+@media screen and (min-width: 576px) {
+    body {
+        background-image: linear-gradient(to top, #2D5128, #8DA750);
+    }
+    
+    section#login {
+        width: 90%;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section#login {
+        width: 990px;
+    }
+
+    section#login > div#imagem {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        float: right;
+        width: 50%;
+    }
+}
