@@ -6,7 +6,7 @@ Desktop (Computador)	De 992px até 1200px
 Grandes Telas (Monitores)	Acima de 1200px
 */
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 550px) {
     body {
         background-image: linear-gradient(to top, #2D5128, #8DA750);
     }
