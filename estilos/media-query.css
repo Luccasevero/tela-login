@@ -6,68 +6,84 @@ Desktop (Computador)	De 992px até 1200px
 Grandes Telas (Monitores)	Acima de 1200px
 */
 
-@media screen and (min-width: 576px) {
+/* Celular DEITADO (landscape) */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    section#login {
+        width: 90%;
+        height: auto;          /* deixa crescer conforme conteúdo */
+        min-height: 280px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    section#login > div#imagem {
+        float: none;
+        flex: 0 0 40%;
+        height: auto;
+        min-height: 280px;
+    }
+
+    section#login > div#formulario {
+        float: none;
+        flex: 1;
+        overflow-y: auto;      /* scroll se o conteúdo não couber */
+        padding: 16px;
+    }
+}
+
+/* Tablet / telas médias */
+@media screen and (min-width: 576px) and (orientation: portrait) {
     body {
         background-image: linear-gradient(to top, #2D5128, #8DA750);
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
     }
-    
+
     section#login {
         width: 90%;
         height: 90vh;
+        display: flex;
+        flex-direction: row;
     }
 
     section#login > div#imagem {
-        float: left;
-        width: 30%;
+        float: none;
+        flex: 0 0 30%;
         height: 100%;
     }
 
     section#login > div#formulario {
-        float: right;
-        width: 70%;
+        float: none;
+        flex: 1;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #2D5128, #8DA750);
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    html {
-    /* Força o HTML a ter o tamanho real da tela e aceitar o fundo */
-    height: 100%; 
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    
-    /* Configuração do Gradiente */
-    background-image: linear-gradient(to top, #2D5128, #8DA750);
-    background-repeat: no-repeat;
-    
-    /* A MÁGICA PARA O CELULAR DEITADO: */
-    /* Se o navegador aceitar, ele usa o DVH (que recalcula a altura dinamicamente) */
-    min-height: 100dvh; 
-    /* Se for um navegador mais antigo, ele usa o 100% como plano de fundo (baseado no html) */
-    min-height: 100%;   
-    
-    /* Mantém o fundo esticado e colado na tela */
-    background-size: cover;
-    background-attachment: fixed; 
-}
-}
-
-@media screen and (min-width: 992px) {
     section#login {
         width: 990px;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
     }
 
     section#login > div#imagem {
-        float: left;
-        width: 50%;
+        float: none;
+        flex: 0 0 50%;
         height: 100%;
     }
 
     section#login > div#formulario {
-        float: right;
-        width: 50%;
+        float: none;
+        flex: 1;
     }
 }
