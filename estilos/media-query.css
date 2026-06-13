@@ -10,7 +10,7 @@ Grandes Telas (Monitores)	Acima de 1200px
 @media screen and (max-width: 768px) and (orientation: landscape) {
     section#login {
         width: 90%;
-        height: auto;          /* deixa crescer conforme conteúdo */
+        height: auto;       /* deixa crescer conforme conteúdo */
         min-height: 280px;
         display: flex;
         flex-direction: row;
@@ -27,7 +27,7 @@ Grandes Telas (Monitores)	Acima de 1200px
     section#login > div#formulario {
         float: none;
         flex: 1;
-        overflow-y: auto;      /* scroll se o conteúdo não couber */
+        overflow-y: auto;   /* scroll se o conteúdo não couber */
         padding: 16px;
     }
 }
@@ -73,7 +73,7 @@ Grandes Telas (Monitores)	Acima de 1200px
         width: 990px;
         height: 90vh;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 
     section#login > div#imagem {
@@ -85,5 +85,22 @@ Grandes Telas (Monitores)	Acima de 1200px
     section#login > div#formulario {
         float: none;
         flex: 1;
+    }
+
+    form > div.campo {
+        width: 60%;
+        margin: auto;
+        margin-top: 15px;
+    }
+    form > a.botao {
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    form > input[type=submit] {
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
     }
 }
